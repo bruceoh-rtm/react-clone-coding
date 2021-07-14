@@ -12,13 +12,13 @@ import {
   NavMenu,
 } from "./NavbarElements";
 
-const Navbar = () => {
+const Navbar = ({toggle}) => {
   return (
     <>
       <Nav>
         <NavbarContainer>
           <NavLogo to="/">dolla</NavLogo>
-          <MobileIcon>
+          <MobileIcon onClick={toggle}>
             <FaBars />
           </MobileIcon>
           <NavMenu>
@@ -36,7 +36,7 @@ const Navbar = () => {
             </NavItem>
           </NavMenu>
           <NavBtn>
-            <NavBtnLink to="signin">Sign In</NavBtnLink>
+            <NavBtnLink to="/signin">Sign In</NavBtnLink>
           </NavBtn>
         </NavbarContainer>
       </Nav>
